@@ -22,10 +22,10 @@ namespace OpenOptimal.web.Plumbing
 		public void Configure()
 		{
 			using(OpenRastaConfiguration.Manual){
-				ResourceSpace.Has.ResourcesOfType<HomeResource>()
+				ResourceSpace.Has.ResourcesOfType<IHomeResource>()
 					.AtUri("/home")
 					.And.AtUri("/")
-					.HandledBy<HomeHandler>()
+					.HandledBy<IHomeHandler>()
 					.RenderedByAspx("~/Views/HomeView.aspx");
 				
 			}

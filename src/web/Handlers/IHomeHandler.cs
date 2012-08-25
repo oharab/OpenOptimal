@@ -14,6 +14,6 @@ namespace OpenOptimal.web.Handlers
 	/// </summary>
 	public interface IHomeHandler
 	{
-		HomeResource	Get();
+		IHomeResource	Get();
 	}
 }

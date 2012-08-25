@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<%=typeof(HomeResource).CreateUri()%>">Op Optimal - Cocooning</a>
+          <a class="brand" href="<%=typeof(IHomeResource).CreateUri()%>">Op Optimal - Cocooning</a>
 <!--          <div class="btn-group pull-right">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
               <i class="icon-user"></i> Username
@@ -63,7 +63,7 @@
 -->
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="<%=typeof(IHomeResource).CreateUri()%>">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
@@ -76,13 +76,9 @@
       <div class="row-fluid">
         <div class="span3">
           <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Navigation</li>
-              <li><a href="#%>">Add new cocoon</a></li>
-              <li><a href="#">Reports</a></li>
-              <li><a href="#">Help</a></li>
-
-            </ul>
+			<asp:ContentPlaceHolder id="SideBarNav" runat="server">
+			
+			</asp:ContentPlaceHolder>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">

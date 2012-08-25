@@ -14,13 +14,15 @@ namespace OpenOptimal.web.Handlers
 	/// </summary>
 	public class HomeHandler:IHomeHandler
 	{
-		public HomeHandler()
+		IResourceFactory resourceFactory;
+		public HomeHandler(IResourceFactory resourceFactory)
 		{
+			this.resourceFactory=resourceFactory;
 		}
 		
-		public HomeResource Get()
+		public IHomeResource Get()
 		{
-			return new HomeResource{Title="Hello World"};
+			return resourceFactory.GetHomeResource("Hello World");
 		}
 	}
 }

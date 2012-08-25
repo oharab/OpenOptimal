@@ -81,6 +81,7 @@
     <Folder Include="Content\img" />
     <Folder Include="Content\js" />
     <Folder Include="Handlers" />
+    <Folder Include="Plumbing\WindsorInstallers" />
     <Folder Include="Views" />
     <Folder Include="Plumbing" />
     <Folder Include="Properties" />
@@ -91,9 +92,14 @@
     <Compile Include="Handlers\HomeHandler.cs" />
     <Compile Include="Handlers\IHomeHandler.cs" />
     <Compile Include="Plumbing\Configuration.cs" />
+    <Compile Include="Plumbing\WindsorDependencyResolverAccessor.cs" />
+    <Compile Include="Plumbing\WindsorInstallers\FactoryInstaller.cs" />
+    <Compile Include="Plumbing\WindsorInstallers\HandlerInstaller.cs" />
+    <Compile Include="Plumbing\WindsorInstallers\ResourceInstaller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\HomeResource.cs" />
     <Compile Include="Resources\IHomeResource.cs" />
+    <Compile Include="Resources\IResourceFactory.cs" />
   </ItemGroup>
   <!--  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" /> -->
   <Import Project="..\..\wraps\openwrap\build\OpenWrap.CSharp.targets" />

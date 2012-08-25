@@ -1,11 +1,21 @@
 ﻿<%@ Page
 Language           = "C#"
-Inherits           = "OpenRasta.Codecs.WebForms.ResourceView<HomeResource>"
+Inherits           = "OpenRasta.Codecs.WebForms.ResourceView<IHomeResource>"
 Title			   = "Bob"
 MasterPageFile	   = "~/Views/Shared/Bootstrap-Fluid.master"	
 %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server"> 
+<asp:Content ID="Nav" ContentPlaceHolderID="SideBarNav" Runat="Server">
+            <ul class="nav nav-list">
+              <li class="nav-header">Navigation</li>
+              <li><a href="#%>">Add new cocoon</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+</asp:Content>
+
+
+<asp:Content ID="Main" ContentPlaceHolderID="MainContent" Runat="Server"> 
 <div class="hero-unit">
 <h1><%= Resource.Title %></h1>
 <p>This is a prototype website to record and manage the cocoon visits carried out under Operation Optimal.</p>
