@@ -6,6 +6,7 @@
  */
 using System;
 using OpenOptimal.web.Resources;
+using OpenRasta.Web;
 
 namespace OpenOptimal.web.Handlers
 {
@@ -15,5 +16,6 @@ namespace OpenOptimal.web.Handlers
 	public interface ICocoonHandler
 	{
 		INewCocoonResource Get();
+		OperationResult Post(INewCocoonResource newCocoonResource);
 	}
 }

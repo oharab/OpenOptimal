@@ -65,6 +65,7 @@
     <None Include="Content\css\bootstrap-responsive.min.css" />
     <None Include="Content\css\bootstrap.css" />
     <None Include="Content\css\bootstrap.min.css" />
+    <None Include="Content\ico\favicon.ico" />
     <None Include="Content\img\glyphicons-halflings-white.png" />
     <None Include="Content\img\glyphicons-halflings.png" />
     <None Include="Content\js\bootstrap.js" />
@@ -81,6 +82,7 @@
     <Folder Include="Content\css" />
     <Folder Include="Content\img" />
     <Folder Include="Content\js" />
+    <Folder Include="Content\ico" />
     <Folder Include="Handlers" />
     <Folder Include="Plumbing\WindsorInstallers" />
     <Folder Include="Views" />
