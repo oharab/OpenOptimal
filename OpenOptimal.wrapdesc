@@ -1,7 +1,7 @@
 ﻿name: OpenOptimal
 depends: openwrap anchored content
-depends: openrasta-core
-depends: openrasta-hosting-aspnet
-depends: openrasta-castle-windsor
-depends: openrasta-codecs-webforms
+depends: openrasta-core = 2.1
+depends: openrasta-hosting-aspnet = 2.1
+depends: openrasta-castle-windsor = 2.1
+depends: openrasta-codecs-webforms = 2.1
 depends: castle.windsor-log4net

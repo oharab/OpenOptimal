@@ -1,0 +1,48 @@
+﻿<%@ Page
+Language           = "C#"
+Inherits           = "OpenRasta.Codecs.WebForms.ResourceView<IHomeResource>"
+Title			   = "Bob"
+MasterPageFile	   = "~/Views/Shared/Bootstrap-Fluid.master"	
+%>
+
+<asp:Content ID="Nav" ContentPlaceHolderID="SideBarNav" Runat="Server">
+            <ul class="nav nav-list">
+              <li class="nav-header">Navigation</li>
+              <li class="active"><a href="<%= typeof(INewCocoonResource).CreateUri()%>">Add new cocoon</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+</asp:Content>
+
+
+<asp:Content ID="Main" ContentPlaceHolderID="MainContent" Runat="Server"> 
+<form method="post" class="form-horizontal" action="<%= typeof(INewCocoonResource).CreateUri()%>">
+	<fieldset>
+		<legend>Enter new Super Cocoon Details</legend>
+		<div class="control-group">
+			<label class="control-label" for="crimeReference">Crime Reference</label>
+			<div class="controls">
+				<input type="text" class="input-xlarge" id="crimeReference" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="address">Address</label>
+			<div class="controls">
+				<input type="text" class="input-xlarge" id="address" />
+				<p class="help-block">Address where the burglary occurred.</p>  
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="address">Address List</label>
+			<div class="controls">
+				<input type="file" class="input-file" id="addressList" />
+				<p class="help-block">List of addresses to super cocoon.</p>  
+			</div>
+		</div>
+		<div class="form-actions">  
+		    <button type="submit" class="btn btn-primary">Save</button>  
+	    </div>  
+	</fieldset>
+</form>
+</asp:Content> 
+

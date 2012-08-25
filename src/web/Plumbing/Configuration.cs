@@ -28,6 +28,11 @@ namespace OpenOptimal.web.Plumbing
 					.HandledBy<IHomeHandler>()
 					.RenderedByAspx("~/Views/HomeView.aspx");
 				
+				ResourceSpace.Has.ResourcesOfType<INewCocoonResource>()
+					.AtUri("/cocoons")
+					.HandledBy<ICocoonHandler>()
+					.RenderedByAspx("~/Views/NewCocoonView.aspx");
+				
 			}
 		}
 	}

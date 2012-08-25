@@ -12,8 +12,10 @@ namespace OpenOptimal.web.Resources
 	/// Factory that builds OpenRasta resources using the Windsor Container
 	/// (Does not need an implementation)
 	/// </summary>
-	public interface IResourceFactory:IDisposable
+	public interface IResourceFactory
 	{
 		IHomeResource GetHomeResource(string Title);
+		
+		INewCocoonResource GetNewCocoonResource();
 	}
 }
