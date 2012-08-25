@@ -15,21 +15,16 @@ namespace OpenOptimal.web.Handlers
 	/// </summary>
 	public class CocoonHandler:ICocoonHandler
 	{
-		private readonly IResourceFactory resourceFactory;
-		public CocoonHandler(IResourceFactory resourceFactory)
+
+		public NewCocoonResource Get()
 		{
-			this.resourceFactory = resourceFactory;
+			return new NewCocoonResource();
 		}
 		
-		public INewCocoonResource Get()
-		{
-			return resourceFactory.GetNewCocoonResource();
-		}
-		
-		public OperationResult Post(INewCocoonResource newCocoonResource){
+		public OperationResult Post(NewCocoonResource newCocoonResource){
 			
 			return new OperationResult.SeeOther{
-					ResponseResource="~/"
+				RedirectLocation=typeof(HomeResource).CreateUri()
 			};
 		}
 	}

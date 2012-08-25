@@ -1,6 +1,6 @@
 ﻿<%@ Page
 Language           = "C#"
-Inherits           = "OpenRasta.Codecs.WebForms.ResourceView<IHomeResource>"
+Inherits           = "OpenRasta.Codecs.WebForms.ResourceView<NewCocoonResource>"
 Title			   = "Bob"
 MasterPageFile	   = "~/Views/Shared/Bootstrap-Fluid.master"	
 %>
@@ -8,7 +8,7 @@ MasterPageFile	   = "~/Views/Shared/Bootstrap-Fluid.master"
 <asp:Content ID="Nav" ContentPlaceHolderID="SideBarNav" Runat="Server">
             <ul class="nav nav-list">
               <li class="nav-header">Navigation</li>
-              <li class="active"><a href="<%= typeof(INewCocoonResource).CreateUri()%>">Add new cocoon</a></li>
+              <li class="active"><a href="<%= typeof(NewCocoonResource).CreateUri()%>">Add new cocoon</a></li>
               <li><a href="#">Reports</a></li>
               <li><a href="#">Help</a></li>
             </ul>
@@ -16,7 +16,7 @@ MasterPageFile	   = "~/Views/Shared/Bootstrap-Fluid.master"
 
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" Runat="Server"> 
-<form method="post" class="form-horizontal" action="<%= typeof(INewCocoonResource).CreateUri()%>" enctype="multipart/form-data">
+<form method="post" class="form-horizontal" action="<%= typeof(NewCocoonResource).CreateUri()%>" enctype="multipart/form-data">
 	<fieldset>
 		<legend>Enter new Super Cocoon Details</legend>
 		<div class="control-group">

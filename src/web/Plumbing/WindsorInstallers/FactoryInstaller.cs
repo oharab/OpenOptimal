@@ -25,7 +25,6 @@ namespace OpenOptimal.web.Plumbing.WindsorInstallers
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{
 			container.AddFacility<TypedFactoryFacility>();
-			container.Register(Component.For<IResourceFactory>().AsFactory());
 		}
 	}
 }

@@ -15,7 +15,7 @@ namespace OpenOptimal.web.Handlers
 	/// </summary>
 	public interface ICocoonHandler
 	{
-		INewCocoonResource Get();
-		OperationResult Post(INewCocoonResource newCocoonResource);
+		NewCocoonResource Get();
+		OperationResult Post(NewCocoonResource newCocoonResource);
 	}
 }

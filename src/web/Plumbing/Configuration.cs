@@ -22,13 +22,13 @@ namespace OpenOptimal.web.Plumbing
 		public void Configure()
 		{
 			using(OpenRastaConfiguration.Manual){
-				ResourceSpace.Has.ResourcesOfType<IHomeResource>()
+				ResourceSpace.Has.ResourcesOfType<HomeResource>()
 					.AtUri("/home")
 					.And.AtUri("/")
 					.HandledBy<IHomeHandler>()
 					.RenderedByAspx("~/Views/HomeView.aspx");
 				
-				ResourceSpace.Has.ResourcesOfType<INewCocoonResource>()
+				ResourceSpace.Has.ResourcesOfType<NewCocoonResource>()
 					.AtUri("/cocoons")
 					.HandledBy<ICocoonHandler>()
 					.RenderedByAspx("~/Views/NewCocoonView.aspx");

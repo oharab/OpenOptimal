@@ -12,7 +12,7 @@ namespace OpenOptimal.web.Resources
 	/// <summary>
 	/// Description of NewCocoonResource.
 	/// </summary>
-	public class NewCocoonResource:INewCocoonResource
+	public class NewCocoonResource
 	{
 		public NewCocoonResource()
 		{

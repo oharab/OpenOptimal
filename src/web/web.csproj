@@ -101,9 +101,6 @@
     <Compile Include="Plumbing\WindsorInstallers\HandlerInstaller.cs" />
     <Compile Include="Plumbing\WindsorInstallers\ResourceInstaller.cs" />
     <Compile Include="Resources\HomeResource.cs" />
-    <Compile Include="Resources\IHomeResource.cs" />
-    <Compile Include="Resources\INewCocoonResource.cs" />
-    <Compile Include="Resources\IResourceFactory.cs" />
     <Compile Include="Resources\NewCocoonResource.cs" />
   </ItemGroup>
   <!--  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" /> -->
