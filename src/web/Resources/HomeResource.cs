@@ -11,7 +11,7 @@ namespace OpenOptimal.web.Resources
 	/// <summary>
 	/// Description of HomeResource.
 	/// </summary>
-	public class HomeResource:IHomeResource
+	public class HomeResource
 	{
 		public string Title { get; set; }
 	}

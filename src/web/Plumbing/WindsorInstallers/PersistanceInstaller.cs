@@ -1,30 +1,27 @@
 ﻿/*
  * User: ben
- * Date: 25/08/2012
- * Time: 15:23
+ * Date: 26/08/2012
+ * Time: 16:42
  * 
  */
 using System;
-using Castle.Facilities.TypedFactory;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
-using OpenOptimal.web.Resources;
+using OpenOptimal.web.Plumbing.NHibernateInstall;
 
 namespace OpenOptimal.web.Plumbing.WindsorInstallers
 {
 	/// <summary>
-	/// Description of FactoryInstaller.
+	/// Description of PersistanceInstaller.
 	/// </summary>
-	public class FactoryInstaller:IWindsorInstaller
+	public class PersistanceInstaller:IWindsorInstaller
 	{
-		public FactoryInstaller()
-		{
-		}
+
 		
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{
-			container.AddFacility<TypedFactoryFacility>();
+			container.AddFacility<NHibernateFacility>();
 		}
 	}
 }

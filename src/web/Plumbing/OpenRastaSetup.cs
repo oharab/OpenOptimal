@@ -16,17 +16,22 @@ namespace OpenOptimal.web.Plumbing
 	/// <summary>
 	/// Configuring OpenRasta
 	/// </summary>
-	public class Configuration:IConfigurationSource
+	public class OpenRastaSetup:IConfigurationSource
 	{
 		
 		public void Configure()
 		{
 			using(OpenRastaConfiguration.Manual){
-				ResourceSpace.Has.ResourcesOfType<IHomeResource>()
+				ResourceSpace.Has.ResourcesOfType<HomeResource>()
 					.AtUri("/home")
 					.And.AtUri("/")
 					.HandledBy<IHomeHandler>()
 					.RenderedByAspx("~/Views/HomeView.aspx");
+				
+				ResourceSpace.Has.ResourcesOfType<NewCocoonResource>()
+					.AtUri("/cocoons")
+					.HandledBy<ICocoonHandler>()
+					.RenderedByAspx("~/Views/NewCocoonView.aspx");
 				
 			}
 		}

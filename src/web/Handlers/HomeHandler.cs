@@ -5,6 +5,7 @@
  * 
  */
 using System;
+using Castle.Core.Logging;
 using OpenOptimal.web.Resources;
 
 namespace OpenOptimal.web.Handlers
@@ -14,15 +15,16 @@ namespace OpenOptimal.web.Handlers
 	/// </summary>
 	public class HomeHandler:IHomeHandler
 	{
-		IResourceFactory resourceFactory;
-		public HomeHandler(IResourceFactory resourceFactory)
+		private readonly ILogger log;
+		
+		public HomeHandler(ILogger log)
 		{
-			this.resourceFactory=resourceFactory;
+			this.log = log;
 		}
 		
-		public IHomeResource Get()
+		public HomeResource Get()
 		{
-			return resourceFactory.GetHomeResource("Hello World");
+			return new HomeResource{Title="Hello World."};
 		}
 	}
 }
