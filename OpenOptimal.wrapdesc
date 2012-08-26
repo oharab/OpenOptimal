@@ -5,3 +5,4 @@ depends: openrasta-hosting-aspnet = 2.1
 depends: openrasta-castle-windsor = 2.1
 depends: openrasta-codecs-webforms = 2.1
 depends: castle.windsor-log4net
+depends: LumenWorks.Framework.io

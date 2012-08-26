@@ -72,6 +72,7 @@
     <None Include="Content\js\bootstrap.min.js" />
     <None Include="Content\js\jquery-1.8.0.min.js" />
     <None Include="Default.aspx" />
+    <None Include="log4net.config" />
     <None Include="Views\HomeView.aspx" />
     <None Include="Views\NewCocoonView.aspx" />
     <None Include="Views\Shared\Bootstrap-Fluid.Master" />
@@ -83,7 +84,10 @@
     <Folder Include="Content\img" />
     <Folder Include="Content\js" />
     <Folder Include="Content\ico" />
+    <Folder Include="Domain\Repositories" />
     <Folder Include="Handlers" />
+    <Folder Include="Domain" />
+    <Folder Include="Plumbing\NHibernate" />
     <Folder Include="Plumbing\WindsorInstallers" />
     <Folder Include="Views" />
     <Folder Include="Plumbing" />
@@ -91,6 +95,10 @@
     <Folder Include="Views\Shared" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\ISuperCocoonRepository.cs" />
+    <Compile Include="Domain\Property.cs" />
+    <Compile Include="Domain\Repositories\SuperCocoonRepository.cs" />
+    <Compile Include="Domain\SuperCocoon.cs" />
     <Compile Include="Handlers\CocoonHandler.cs" />
     <Compile Include="Handlers\HomeHandler.cs" />
     <Compile Include="Handlers\ICocoonHandler.cs" />
@@ -99,6 +107,8 @@
     <Compile Include="Plumbing\WindsorDependencyResolverAccessor.cs" />
     <Compile Include="Plumbing\WindsorInstallers\FactoryInstaller.cs" />
     <Compile Include="Plumbing\WindsorInstallers\HandlerInstaller.cs" />
+    <Compile Include="Plumbing\WindsorInstallers\LoggingInstaller.cs" />
+    <Compile Include="Plumbing\WindsorInstallers\RepositoryInstaller.cs" />
     <Compile Include="Plumbing\WindsorInstallers\ResourceInstaller.cs" />
     <Compile Include="Resources\HomeResource.cs" />
     <Compile Include="Resources\NewCocoonResource.cs" />
