@@ -21,8 +21,16 @@ namespace OpenOptimal.web.Domain
 			cocoonProperties=new List<Property>();
 		}
 		public virtual string CrimeReference { get; set; }
-		public virtual Property TargettedProperty { get; set; }
-		public virtual IList<Property> CocoonProperties{get;set;}
+		public virtual string TargettedProperty { get; set; }
+		public virtual IList<Property> CocoonProperties{
+			get{
+				return cocoonProperties;
+			}
+			
+			set {
+				cocoonProperties=value;
+			}
+		}
 		
 	}
 }

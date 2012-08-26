@@ -16,7 +16,7 @@ namespace OpenOptimal.web.Plumbing
 	/// <summary>
 	/// Configuring OpenRasta
 	/// </summary>
-	public class Configuration:IConfigurationSource
+	public class OpenRastaSetup:IConfigurationSource
 	{
 		
 		public void Configure()

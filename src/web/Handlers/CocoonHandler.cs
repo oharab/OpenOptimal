@@ -35,6 +35,10 @@ namespace OpenOptimal.web.Handlers
 		
 		public OperationResult Post(NewCocoonResource newCocoonResource){
 			log.Debug("New Cocoon Resource posted.");
+			var superCocoon=new SuperCocoon();
+			superCocoon.CrimeReference=newCocoonResource.CrimeReference;
+			superCocoon.TargettedProperty=newCocoonResource.Address;
+			
 			try{
 				using(CsvReader csv=new CsvReader(new StreamReader(newCocoonResource.AddressList.OpenStream()),true))
 				{
@@ -43,20 +47,31 @@ namespace OpenOptimal.web.Handlers
 					string[] headers = csv.GetFieldHeaders();
 					while (csv.ReadNextRecord())
 					{
-						for (int i = 0; i < fieldCount; i++)
-							log.DebugFormat("{0} = {1};",headers[i], csv[i]);
-						log.Debug("");
+						superCocoon.CocoonProperties.Add(new Property{
+						                                 	Company_Organisation=csv["Company/Organisation"],
+						                                 	Address=csv["Address"],
+						                                 	Town=csv["Town"],
+						                                 	County=csv["County"],
+						                                 	PostCode=csv["PostCode"],
+						                                 	Easting=double.Parse(csv["Easting"]),
+						                                 	Northing=double.Parse(csv["Northing"])
+						                                 });
 					}
+					
+					repository.Save(superCocoon);
+					
+					return new OperationResult.SeeOther{
+						RedirectLocation=typeof(HomeResource).CreateUri()
+					};
 				}
-				
-				return new OperationResult.SeeOther{
-					RedirectLocation=typeof(HomeResource).CreateUri()
-				};
-			}catch(MalformedCsvException)
+			}
+			catch(Exception ex)
 			{
+				log.Error("Error creating new SuperCocoon.",ex);
 				return new OperationResult.BadRequest();
 				
 			}
 		}
+		
 	}
 }

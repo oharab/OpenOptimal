@@ -26,7 +26,8 @@ namespace OpenOptimal.web.Plumbing.WindsorInstallers
 		{
 			container.Register(Component.For<ISuperCocoonRepository>()
 			                   .ImplementedBy<SuperCocoonRepository>()
-			                   .LifeStyle.PerWebRequest
+			                   .LifeStyle.Transient
+			                   
 			                  );
 				
 		}

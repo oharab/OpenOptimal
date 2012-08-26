@@ -5,6 +5,7 @@
  * 
  */
 using System;
+using NHibernate;
 using OpenOptimal.web.Domain;
 
 namespace OpenOptimal.web.Domain.Repositories
@@ -14,9 +15,21 @@ namespace OpenOptimal.web.Domain.Repositories
 	/// </summary>
 	public class SuperCocoonRepository:ISuperCocoonRepository
 	{
+		private readonly ISession session;
 		
-		public SuperCocoonRepository()
+		public SuperCocoonRepository(ISession session)
 		{
+			this.session = session;
 		}
+		
+		public void Save(SuperCocoon superCocoon)
+		{
+			using(ITransaction transaction=session.BeginTransaction()){
+				session.Save(superCocoon);
+				transaction.Commit();
+			}
+		}
+		
+		
 	}
 }

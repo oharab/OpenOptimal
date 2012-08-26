@@ -13,5 +13,6 @@ namespace OpenOptimal.web.Domain
 	/// </summary>
 	public interface ISuperCocoonRepository
 	{
+		void Save(SuperCocoon superCocoon);
 	}
 }

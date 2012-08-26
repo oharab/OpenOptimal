@@ -13,6 +13,7 @@ namespace OpenOptimal.web.Domain
 	/// </summary>
 	public class Property
 	{
+		public virtual Guid	Id { get; set;}
 		public virtual string Company_Organisation { get; set; }
 		public virtual string Address { get; set; }
 		public virtual string Town { get; set; }
@@ -20,5 +21,6 @@ namespace OpenOptimal.web.Domain
 		public virtual string PostCode { get; set; }
 		public virtual double Easting { get; set; }
 		public virtual double Northing { get; set; }
+		public virtual SuperCocoon SuperCocoon {get;set;}
 	}
 }
