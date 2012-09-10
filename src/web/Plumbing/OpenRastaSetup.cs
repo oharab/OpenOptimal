@@ -37,6 +37,10 @@ namespace OpenOptimal.web.Plumbing
 					.AtUri("/cocoons/{CrimeReference}")
 					.HandledBy<ICocoonHandler>()
 					.RenderedByAspx("~/Views/SuperCocoonView.aspx");
+				ResourceSpace.Has.ResourcesOfType<SuperCocoonPropertyResource>()
+					.AtUri("/cocoons/{CrimeReference}/{Id}")
+					.HandledBy<ICocoonHandler>()
+					.RenderedByAspx("~/Views/SuperCocoonPropertyView.aspx");
 			}
 		}
 	}

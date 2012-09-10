@@ -78,6 +78,7 @@ namespace OpenOptimal.web.Handlers
 		
 		public OperationResult Get(string CrimeReference)
 		{
+			
 			var superCocoon=repository.GetByCrimeReference(CrimeReference);
 			if(superCocoon==null)
 				return new OperationResult.NotFound();
@@ -96,6 +97,11 @@ namespace OpenOptimal.web.Handlers
 				                      });
 			}
 			return new OperationResult.OK{ResponseResource=result};
+		}
+		
+		public OperationResult Get(string CrimeReference, Guid Id)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

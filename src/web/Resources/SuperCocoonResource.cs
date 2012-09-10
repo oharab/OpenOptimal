@@ -17,7 +17,7 @@ namespace OpenOptimal.web.Resources
 	{
 		public SuperCocoonResource()
 		{
-			
+			this.Properties=new List<SuperCocoonPropertyResource>();
 		}
 		
 		public string CrimeReference {

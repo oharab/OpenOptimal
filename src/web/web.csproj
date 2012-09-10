@@ -76,6 +76,7 @@
     <None Include="Views\HomeView.aspx" />
     <None Include="Views\NewCocoonView.aspx" />
     <None Include="Views\Shared\Bootstrap-Fluid.Master" />
+    <None Include="Views\SuperCocoonPropertyView.aspx" />
     <None Include="Views\SuperCocoonView.aspx" />
     <None Include="web.config" />
   </ItemGroup>
@@ -89,7 +90,6 @@
     <Folder Include="Handlers" />
     <Folder Include="Domain" />
     <Folder Include="Plumbing\NHibernateInstall" />
-    <Folder Include="Plumbing\NHibernateInstall\FluentMappings" />
     <Folder Include="Plumbing\WindsorInstallers" />
     <Folder Include="Views" />
     <Folder Include="Plumbing" />
@@ -105,8 +105,7 @@
     <Compile Include="Handlers\HomeHandler.cs" />
     <Compile Include="Handlers\ICocoonHandler.cs" />
     <Compile Include="Handlers\IHomeHandler.cs" />
-    <Compile Include="Plumbing\NHibernateInstall\FluentMappings\PropertyMap.cs" />
-    <Compile Include="Plumbing\NHibernateInstall\FluentMappings\SuperCocoonMapping.cs" />
+    <Compile Include="Plumbing\NHibernateInstall\AutoMappingConfiguration.cs" />
     <Compile Include="Plumbing\OpenRastaSetup.cs" />
     <Compile Include="Plumbing\NHibernateInstall\NHibernateFacility.cs" />
     <Compile Include="Plumbing\WindsorDependencyResolverAccessor.cs" />

@@ -27,8 +27,6 @@ namespace OpenOptimal.web.Resources
 		public double Easting { get; set; }
 		public double Northing { get; set; }
 		
-		public Uri Href { get{
-				return this.CreateUri();
-			} }
+		
 	}
 }

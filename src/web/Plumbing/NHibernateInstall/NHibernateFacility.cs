@@ -10,6 +10,7 @@ using Castle.MicroKernel.Registration;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using FluentNHibernate.Conventions.Helpers;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
@@ -38,37 +39,43 @@ namespace OpenOptimal.web.Plumbing.NHibernateInstall
 		
 		protected virtual IPersistenceConfigurer SetupDatabase()
 		{
-			return MsSqlConfiguration.MsSql2008
+			return MsSqlConfiguration.MsSql2005
 				.UseOuterJoin()
 				.ConnectionString(x => x.FromConnectionStringWithKey("OpenOptimal"))
-				.ShowSql();
+				;
 		}
 		
 		private Configuration BuildDatabaseConfiguration()
 		{
 			return Fluently.Configure()
 				.Database(SetupDatabase)
-				.Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHibernateFacility>())
+				.Mappings(m => m.AutoMappings.Add(
+					AutoMap.AssemblyOf<NHibernateFacility>(new AutoMappingConfiguration())
+					.Conventions.Add(
+						DefaultCascade.All()
+					)
+				)
+				         )
 				.ExposeConfiguration(c=>{
 				                     	BuildSchema( c );
-				                     	c.Properties[ NHibernate.Cfg.Environment.CurrentSessionContextClass ] = "web";
+				                     	c.Properties[ global::NHibernate.Cfg.Environment.ReleaseConnections] = "on_close";
 				                     })
 				.BuildConfiguration();
 		}
 		
 		// Drops and creates the database schema
-//         private static void BuildSchema( Configuration cfg )
-//         {
-//             new SchemaExport( cfg )
-//                 .Create( true, true );
-//             
-//         }
+//		         private static void BuildSchema( Configuration cfg )
+//		         {
+//		             new SchemaExport( cfg )
+//		                 .Create( true, true );
+//
+//		         }
 
-        //Updates the database schema if there are any changes to the model
-        private static void BuildSchema( Configuration cfg )
-        {
-            new SchemaUpdate( cfg );
-        }
+		//Updates the database schema if there are any changes to the model
+		private static void BuildSchema( Configuration cfg )
+		{
+			new SchemaUpdate( cfg );
+		}
 		
 
 	}

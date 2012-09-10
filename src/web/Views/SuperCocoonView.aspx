@@ -28,12 +28,12 @@ void Page_Load(Object sender, EventArgs e)
 
 <asp:Repeater Id="PropertyRepeater" Runat="server" DataSource=<%# Resource.Properties %>>
 	<HeaderTemplate><table>
-	<tr><th>Address</th><th>Company</th><th>Town</th><th>County</th><th>Postcode</th></tr>
+	<tr><th>Company</th><th>Address</th><th>Town</th><th>County</th><th>Postcode</th><td /></tr>
 	</HeaderTemplate>
 	<FooterTemplate></table></FooterTemplate>
 	<ItemTemplate>
-	<tr id="property<%#Container.DataItem("Id")%>">
-	
+	<tr>
+		<td><%#((SuperCocoonPropertyResource)Container.DataItem).Company_Organisation%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Address%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Town%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).County%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).PostCode%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Id%></td>
 	</tr>
 	</ItemTemplate>
 </asp:Repeater>
