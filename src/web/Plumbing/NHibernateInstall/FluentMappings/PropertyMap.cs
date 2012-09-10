@@ -30,7 +30,7 @@ namespace OpenOptimal.web.Plumbing.NHibernateInstall.ClassMaps
 			Map(x=>x.Easting);
 			Map(x=>x.Northing);
 			
-			References(x=>x.SuperCocoon);
+			References(x=>x.SuperCocoon).Not.LazyLoad();
 			
 		}
 	}

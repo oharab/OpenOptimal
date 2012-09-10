@@ -29,10 +29,14 @@ namespace OpenOptimal.web.Plumbing
 					.RenderedByAspx("~/Views/HomeView.aspx");
 				
 				ResourceSpace.Has.ResourcesOfType<NewCocoonResource>()
-					.AtUri("/cocoons")
+					.AtUri("/cocoons/new")
 					.HandledBy<ICocoonHandler>()
 					.RenderedByAspx("~/Views/NewCocoonView.aspx");
 				
+				ResourceSpace.Has.ResourcesOfType<SuperCocoonResource>()
+					.AtUri("/cocoons/{CrimeReference}")
+					.HandledBy<ICocoonHandler>()
+					.RenderedByAspx("~/Views/SuperCocoonView.aspx");
 			}
 		}
 	}

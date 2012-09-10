@@ -14,5 +14,7 @@ namespace OpenOptimal.web.Domain
 	public interface ISuperCocoonRepository
 	{
 		void Save(SuperCocoon superCocoon);
+		
+		SuperCocoon GetByCrimeReference(string crimeReference);
 	}
 }

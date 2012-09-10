@@ -57,13 +57,14 @@ namespace OpenOptimal.web.Plumbing.NHibernateInstall
 		}
 		
 		// Drops and creates the database schema
-        // private static void BuildSchema( Configuration cfg )
-        // {
-        //     new SchemaExport( cfg )
-        //         .Create( true, true );
-        // }
+//         private static void BuildSchema( Configuration cfg )
+//         {
+//             new SchemaExport( cfg )
+//                 .Create( true, true );
+//             
+//         }
 
-        // Updates the database schema if there are any changes to the model
+        //Updates the database schema if there are any changes to the model
         private static void BuildSchema( Configuration cfg )
         {
             new SchemaUpdate( cfg );

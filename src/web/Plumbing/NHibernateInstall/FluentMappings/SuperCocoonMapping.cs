@@ -22,7 +22,8 @@ namespace OpenOptimal.web.Plumbing.NHibernateInstall.FluentMappings
 				.GeneratedBy.Assigned();
 			Map(x=>x.TargettedProperty);
 			HasMany(x=>x.CocoonProperties)
-				.Cascade.AllDeleteOrphan();
+				.Cascade.AllDeleteOrphan()
+				;
 		}
 	}
 }

@@ -76,6 +76,7 @@
     <None Include="Views\HomeView.aspx" />
     <None Include="Views\NewCocoonView.aspx" />
     <None Include="Views\Shared\Bootstrap-Fluid.Master" />
+    <None Include="Views\SuperCocoonView.aspx" />
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,8 @@
     <Compile Include="Plumbing\WindsorInstallers\ResourceInstaller.cs" />
     <Compile Include="Resources\HomeResource.cs" />
     <Compile Include="Resources\NewCocoonResource.cs" />
+    <Compile Include="Resources\SuperCocoonPropertyResource.cs" />
+    <Compile Include="Resources\SuperCocoonResource.cs" />
   </ItemGroup>
   <!--  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" /> -->
   <Import Project="..\..\wraps\openwrap\build\OpenWrap.CSharp.targets" />
