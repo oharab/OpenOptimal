@@ -31,5 +31,10 @@ namespace OpenOptimal.web.Domain.Repositories
 		}
 		
 		
+		
+		public SuperCocoon GetByCrimeReference(string crimeReference)
+		{
+			return session.Get<SuperCocoon>(crimeReference);
+		}
 	}
 }

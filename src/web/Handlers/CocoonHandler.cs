@@ -73,5 +73,35 @@ namespace OpenOptimal.web.Handlers
 			}
 		}
 		
+		
+		
+		
+		public OperationResult Get(string CrimeReference)
+		{
+			
+			var superCocoon=repository.GetByCrimeReference(CrimeReference);
+			if(superCocoon==null)
+				return new OperationResult.NotFound();
+			var result= new SuperCocoonResource{
+				CrimeReference=superCocoon.CrimeReference,
+				Address=superCocoon.TargettedProperty
+			};
+			foreach (var property in superCocoon.CocoonProperties) {
+				result.Properties.Add(new SuperCocoonPropertyResource{
+				                      Id=property.Id,
+				                      Address=property.Address,
+				                      Company_Organisation=property.Company_Organisation,
+				                      Town=property.Town,
+				                      County=property.County,
+				                      PostCode=property.PostCode,
+				                      });
+			}
+			return new OperationResult.OK{ResponseResource=result};
+		}
+		
+		public OperationResult Get(string CrimeReference, Guid Id)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

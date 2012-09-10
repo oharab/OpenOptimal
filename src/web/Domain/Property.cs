@@ -21,6 +21,5 @@ namespace OpenOptimal.web.Domain
 		public virtual string PostCode { get; set; }
 		public virtual double Easting { get; set; }
 		public virtual double Northing { get; set; }
-		public virtual SuperCocoon SuperCocoon {get;set;}
 	}
 }

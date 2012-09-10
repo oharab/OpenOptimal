@@ -17,5 +17,7 @@ namespace OpenOptimal.web.Handlers
 	{
 		NewCocoonResource Get();
 		OperationResult Post(NewCocoonResource newCocoonResource);
+		OperationResult Get(string CrimeReference);
+		OperationResult Get(string CrimeReference,Guid Id);
 	}
 }
