@@ -23,7 +23,7 @@ namespace OpenOptimal.web.Plumbing.WindsorInstallers
 
 			container.Register(AllTypes.FromThisAssembly()
 			                   .Where(t=>t.Namespace.EndsWith("Resources"))
-			                   .Configure(c=>c.LifeStyle.Transient)
+			                   .LifestyleTransient()
 			                   .WithService.FirstInterface()
 			                  );
 		}
