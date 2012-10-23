@@ -5,6 +5,7 @@
  * 
  */
 using System;
+using System.Collections.Generic;
 
 namespace OpenOptimal.web.Domain
 {
@@ -16,5 +17,7 @@ namespace OpenOptimal.web.Domain
 		void Save(SuperCocoon superCocoon);
 		
 		SuperCocoon GetByCrimeReference(string crimeReference);
+		
+		IEnumerable<SuperCocoon> ListOutstanding();
 	}
 }

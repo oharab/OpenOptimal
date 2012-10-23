@@ -5,6 +5,7 @@
  * 
  */
 using System;
+using System.Collections.Generic;
 using NHibernate;
 using OpenOptimal.web.Domain;
 
@@ -35,6 +36,12 @@ namespace OpenOptimal.web.Domain.Repositories
 		public SuperCocoon GetByCrimeReference(string crimeReference)
 		{
 			return session.Get<SuperCocoon>(crimeReference);
+		}
+		
+		public IEnumerable<SuperCocoon> ListOutstanding()
+		{
+			return session.CreateCriteria<SuperCocoon>()
+				.List<SuperCocoon>();
 		}
 	}
 }

@@ -6,7 +6,10 @@
  *  */
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+
 using OpenOptimal.web.Domain;
+using OpenRasta.Web;
 
 namespace OpenOptimal.web.Resources
 {
@@ -25,11 +28,13 @@ namespace OpenOptimal.web.Resources
 			set ;
 		}
 		
-		public string Address {
+		public string TargettedProperty {
 			get ;
 			set ;
 		}
 		
 		public IList<SuperCocoonPropertyResource> Properties{get;set;}
+		
+		
 	}
 }

@@ -5,6 +5,7 @@
  * 
  */
 using System;
+using System.Collections.Generic;
 
 namespace OpenOptimal.web.Resources
 {
@@ -14,5 +15,7 @@ namespace OpenOptimal.web.Resources
 	public class HomeResource
 	{
 		public string Title { get; set; }
+		public IEnumerable<SuperCocoonResource> OutstandingSuperCocoons{get;set;}
+		
 	}
 }

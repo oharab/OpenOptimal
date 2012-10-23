@@ -42,6 +42,7 @@ namespace OpenOptimal.web.Plumbing.NHibernateInstall
 			return MsSqlConfiguration.MsSql2005
 				.UseOuterJoin()
 				.ConnectionString(x => x.FromConnectionStringWithKey("OpenOptimal"))
+				.ShowSql()
 				;
 		}
 		

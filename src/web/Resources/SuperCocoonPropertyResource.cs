@@ -19,6 +19,7 @@ namespace OpenOptimal.web.Resources
 		}
 		
 		public Guid	Id { get; set;}
+		public string CrimeReference {get;set ;}
 		public string Company_Organisation { get; set; }
 		public string Address { get; set; }
 		public string Town { get; set; }

@@ -24,7 +24,7 @@ void Page_Load(Object sender, EventArgs e)
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" Runat="Server"> 
 <h2><%= Resource.CrimeReference %></h2>
-<p><%= Resource.Address %></p>
+<p><%= Resource.TargettedProperty %></p>
 
 <asp:Repeater Id="PropertyRepeater" Runat="server" DataSource=<%# Resource.Properties %>>
 	<HeaderTemplate><table>
@@ -33,7 +33,7 @@ void Page_Load(Object sender, EventArgs e)
 	<FooterTemplate></table></FooterTemplate>
 	<ItemTemplate>
 	<tr>
-		<td><%#((SuperCocoonPropertyResource)Container.DataItem).Company_Organisation%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Address%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Town%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).County%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).PostCode%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Id%></td>
+		<td><%#((SuperCocoonPropertyResource)Container.DataItem).Company_Organisation%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Address%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).Town%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).County%></td><td><%#((SuperCocoonPropertyResource)Container.DataItem).PostCode%></td><td><a href="<%#((SuperCocoonPropertyResource)Container.DataItem).CreateUri()%>"><%#((SuperCocoonPropertyResource)Container.DataItem).Id%></a></td>
 	</tr>
 	</ItemTemplate>
 </asp:Repeater>

@@ -84,11 +84,12 @@ namespace OpenOptimal.web.Handlers
 				return new OperationResult.NotFound();
 			var result= new SuperCocoonResource{
 				CrimeReference=superCocoon.CrimeReference,
-				Address=superCocoon.TargettedProperty
+				TargettedProperty=superCocoon.TargettedProperty
 			};
 			foreach (var property in superCocoon.CocoonProperties) {
 				result.Properties.Add(new SuperCocoonPropertyResource{
 				                      Id=property.Id,
+				                      CrimeReference=CrimeReference,
 				                      Address=property.Address,
 				                      Company_Organisation=property.Company_Organisation,
 				                      Town=property.Town,
