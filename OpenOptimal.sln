@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
 # SharpDevelop 4.2.1.8805
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenOptimal", "OpenOptimal", "{AAF49687-6665-4ECB-975D-8FEA344F019C}"
 	ProjectSection(SolutionItems) = postProject
@@ -15,9 +15,5 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1ABC612C-1692-4727-B7E8-132117337C82}.Debug|x86.Build.0 = Debug|x86
-		{1ABC612C-1692-4727-B7E8-132117337C82}.Debug|x86.ActiveCfg = Debug|x86
-		{1ABC612C-1692-4727-B7E8-132117337C82}.Release|x86.Build.0 = Release|x86
-		{1ABC612C-1692-4727-B7E8-132117337C82}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
