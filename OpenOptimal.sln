@@ -4,11 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # SharpDevelop 4.2.1.8805
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenOptimal", "OpenOptimal", "{AAF49687-6665-4ECB-975D-8FEA344F019C}"
 	ProjectSection(SolutionItems) = postProject
-		..\OpenOptimal.bak\version = ..\OpenOptimal.bak\version
 		OpenOptimal.wrapdesc = OpenOptimal.wrapdesc
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web", "src\web\web.csproj", "{1ABC612C-1692-4727-B7E8-132117337C82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
