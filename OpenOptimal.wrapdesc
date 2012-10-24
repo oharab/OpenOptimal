@@ -2,3 +2,4 @@
 depends: openwrap anchored content
 depends: openrasta-templates
 depends: openrasta-hosting-aspnet = 3.0
+depends: openrasta-devtools
