@@ -51,6 +51,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DefineConstants>TRACE</DefineConstants>
+    <StartAction>StartURL</StartAction>
+    <StartURL>/optimal</StartURL>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

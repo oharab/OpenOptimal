@@ -21,7 +21,7 @@ namespace OpenOptimal.Web
 		public void Configure()
 		{
 			ResourceSpace.Has.Resource<Home>()
-				.Uri("/optimal/home")
+				.Uri("/optimal/cocoons")
 				.And.Uri("/optimal")
 				.Handler<HomeHandler>()
 				.RenderedByAspx("~/Views/HomeView.aspx");
