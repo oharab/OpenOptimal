@@ -1,5 +1,6 @@
 ﻿name: OpenOptimal
-depends: openwrap anchored content
+depends: openwrap anchored content = 2.0.2
 depends: openrasta-templates
 depends: openrasta-hosting-aspnet = 3.0
 depends: openrasta-devtools
+depends: Openfilesystem

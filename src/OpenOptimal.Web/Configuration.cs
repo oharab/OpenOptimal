@@ -7,12 +7,14 @@ using System.Text;
 using System.Web;
 using System.Xml;
 using System.Xml.Linq;
+
+using OpenFileSystem.IO;
 using OpenOptimal.Web.Handlers;
 using OpenOptimal.Web.Resources;
-using OpenRasta.Configuration;
-using OpenRasta.Web;
 using OpenRasta.Codecs;
 using OpenRasta.Codecs.WebForms;
+using OpenRasta.Configuration;
+using OpenRasta.Web;
 
 namespace OpenOptimal.Web
 {
@@ -26,10 +28,12 @@ namespace OpenOptimal.Web
 				.Handler<HomeHandler>()
 				.RenderedByAspx("~/Views/HomeView.aspx");
 			
-			ResourceSpace.Has.Resource<Stream>()
-				.Uri("/optimal/css/320andup.scss")
+			ResourceSpace.Has.Resource<IFile>()
+				.Uri("/css/{path}")
 				.Handler<StaticResourceHandler>()
 				.TranscodedBy<ApplicationOctetStreamCodec>()
+				.ForMediaType("text/css")
+				.Extension(".css")
 				;
 		}
 	}
