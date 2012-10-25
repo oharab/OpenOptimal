@@ -16,16 +16,15 @@ using OpenRasta.Codecs.WebForms;
 
 namespace OpenOptimal.Web
 {
-    public class Configuration : IConfigurationSource
-    {
-        public void Configure()
-        {
-        	ResourceSpace.Uses.ConventionsFrom(this);
-        	ResourceSpace.Has.Resource<Home>()
-        		.Uri("/")
-        		.And.Uri("/home")
-        		.Handler<HomeHandler>()
-        		.RenderedByAspx("~/Views/HomeView.aspx");
-        }
-    }
+	public class Configuration : IConfigurationSource
+	{
+		public void Configure()
+		{
+			ResourceSpace.Has.Resource<Home>()
+				.Uri("/optimal/home")
+				.And.Uri("/optimal")
+				.Handler<HomeHandler>()
+				.RenderedByAspx("~/Views/HomeView.aspx");
+		}
+	}
 }
