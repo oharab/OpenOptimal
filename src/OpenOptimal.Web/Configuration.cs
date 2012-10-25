@@ -20,6 +20,7 @@ namespace OpenOptimal.Web
     {
         public void Configure()
         {
+        	ResourceSpace.Uses.ConventionsFrom(this);
         	ResourceSpace.Has.Resource<Home>()
         		.Uri("/")
         		.And.Uri("/home")
