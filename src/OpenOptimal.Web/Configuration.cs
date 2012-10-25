@@ -21,10 +21,16 @@ namespace OpenOptimal.Web
 		public void Configure()
 		{
 			ResourceSpace.Has.Resource<Home>()
-				.Uri("/optimal/cocoons")
-				.And.Uri("/optimal")
+				.Uri("/cocoons")
+				.And.Uri("/")
 				.Handler<HomeHandler>()
 				.RenderedByAspx("~/Views/HomeView.aspx");
+			
+			ResourceSpace.Has.Resource<Stream>()
+				.Uri("/optimal/css/320andup.scss")
+				.Handler<StaticResourceHandler>()
+				.TranscodedBy<ApplicationOctetStreamCodec>()
+				;
 		}
 	}
 }
