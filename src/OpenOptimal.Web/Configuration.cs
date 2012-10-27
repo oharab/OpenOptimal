@@ -29,12 +29,13 @@ namespace OpenOptimal.Web
 				.RenderedByAspx("~/Views/HomeView.aspx");
 			
 			ResourceSpace.Has.Resource<IFile>()
-				.Uri("/css/{path}")
+				.Uri("/css/OpenOptimal.css")
 				.Handler<StaticResourceHandler>()
 				.TranscodedBy<ApplicationOctetStreamCodec>()
 				.ForMediaType("text/css")
 				.Extension(".css")
 				;
+			
 		}
 	}
 }

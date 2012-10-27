@@ -5,12 +5,14 @@ require 'version_bumper'
 
 task :default => [:msbuild]
 
-msbuild :msbuild => [:bumpbuild, :assemblyinfo ] do |msb|	
+desc "Build the solution"
+msbuild :msbuild => [:bumpbuild, :assemblyinfo, :compilecss ] do |msb|	
   msb.properties = { :configuration => :Debug }
   msb.targets = [ :Clean, :Build ]
   msb.solution = "OpenOptimal.sln"
 end
 
+desc "create the assembly info"
 assemblyinfo :assemblyinfo do |asm|
   asm.version = bumper_version.to_s
   asm.file_version = bumper_version.to_s
@@ -23,7 +25,13 @@ assemblyinfo :assemblyinfo do |asm|
   asm.output_file = "src/OpenOptimal.web/Properties/AssemblyInfo.cs"
 end
 
+desc "Increase the build number"
 task :bumpbuild do
   bumper_version.bump_build
   bumper_version.write('version')
+end
+
+desc "compile the css from sass"
+task :compilecss do
+  system "compass compile -c compass.rb --force"
 end

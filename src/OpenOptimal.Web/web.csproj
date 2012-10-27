@@ -94,10 +94,11 @@
     <Folder Include="img\m" />
     <Folder Include="img\startup" />
     <Folder Include="js" />
+    <Folder Include="scss" />
     <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="css\320andup.css" />
+    <None Include="css\OpenOptimal.css" />
     <None Include="fonts\fontawesome-webfont.eot" />
     <None Include="fonts\fontawesome-webfont.svg" />
     <None Include="fonts\fontawesome-webfont.svgz" />
@@ -123,6 +124,28 @@
     <None Include="js\plugins.js" />
     <None Include="js\script.js" />
     <None Include="js\selectivizr-min.js" />
+    <None Include="scss\OpenOptimal.scss" />
+    <None Include="scss\_1382.scss" />
+    <None Include="scss\_2x.scss" />
+    <None Include="scss\_480.scss" />
+    <None Include="scss\_600.scss" />
+    <None Include="scss\_768.scss" />
+    <None Include="scss\_992.scss" />
+    <None Include="scss\_buttons.scss" />
+    <None Include="scss\_colour.scss" />
+    <None Include="scss\_elements.scss" />
+    <None Include="scss\_font-awesome.scss" />
+    <None Include="scss\_forms.scss" />
+    <None Include="scss\_mixins.scss" />
+    <None Include="scss\_modernizr.scss" />
+    <None Include="scss\_page.scss" />
+    <None Include="scss\_print.scss" />
+    <None Include="scss\_reset.scss" />
+    <None Include="scss\_site.scss" />
+    <None Include="scss\_tables.scss" />
+    <None Include="scss\_texture.scss" />
+    <None Include="scss\_typography.scss" />
+    <None Include="scss\_variables.scss" />
     <None Include="Views\HomeView.aspx" />
   </ItemGroup>
   <Import Project="..\..\wraps\openwrap\build\OpenWrap.CSharp.targets" />

@@ -21,13 +21,13 @@ Title			   = "Op Optimal"
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet"  type="text/css" href="css/320andup.css">
+<link rel="stylesheet"  type="text/css" href="<%= VirtualPathUtility.ToAbsolute("~/css/OpenOptimal.css") %>">
 <!--[if (lt IE 9) & (!IEMobile)]>
-<script src="js/selectivizr-min.js"></script>
+<script src="<%= VirtualPathUtility.ToAbsolute("~/js/selectivizr-min.js")%>"></script>
 <![endif]-->
 
 <!-- JavaScript -->
-<script src="js/modernizr-2.5.3-min.js"></script>
+<script src="<%= VirtualPathUtility.ToAbsolute("~/js/modernizr-2.5.3-min.js")%>"></script>
 
 
 <meta http-equiv="cleartype" content="on">
@@ -41,9 +41,7 @@ Title			   = "Op Optimal"
 
 <div class="content clearfix">
 	<h1 class="h1">Op Optimal - Super Cocoons</h1>
-	<section role="">
-		<h1 class="h2">Colour</h1>
-		<h2 class="h3">Base colour</h2>
+	<section>
 	</section>
 </div><!-- / content -->
 
@@ -51,10 +49,10 @@ Title			   = "Op Optimal"
 <small>For more information contact the <a href="http://wyp-intranet/divisionsdepartments/SA/leedsareacommunitysafety/LeedsDIU/ProjectOptimal/" alt="Op Optimal Home Page">Op Optimal team.</a></small>
 </footer>
 
-<script src="/optimal/js/jquery-1.7.2.min.js"></script>
-<script src="/optimal/js/plugins.js"></script>
-<script src="/optimal/js/script.js"></script>
-<script src="/optimal/js/helper.js"></script>
+<script src="<%= VirtualPathUtility.ToAbsolute("~/js/jquery-1.7.2.min.js")%>"></script>
+<script src="<%= VirtualPathUtility.ToAbsolute("~/js/plugins.js")%>"></script>
+<script src="<%= VirtualPathUtility.ToAbsolute("~/js/script.js")%>"></script>
+<script src="<%= VirtualPathUtility.ToAbsolute("~/js/helper.js")%>"></script>
 
 </body>
 </html>
